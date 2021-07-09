@@ -1,0 +1,15 @@
+System.Console.WriteLine("masukkan angka untuk array = ");
+            int n = int.Parse(Console.ReadLine());
+            System.Console.WriteLine("masukkan value untuk setiap array = ");
+            int[] array = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            System.Console.WriteLine("output array = ");
+            foreach (int x in array)
+            {
+                Console.Write(array + " ");
+            }
+
+// catatan : agar sesuai value yang diharapkan, gunakan <= , >=

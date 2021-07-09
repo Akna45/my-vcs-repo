@@ -1,0 +1,21 @@
+body {
+    background-image: url(/Resources/image/FB_IMG_1605262203731.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: rgb(253, 253, 253);
+    margin-left: 655px;
+    font-size: large;
+}

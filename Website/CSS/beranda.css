@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    color: royalblue;
+}
+
+a {
+    display: inline-block;
+    
+}
+
+img {
+    margin-left: 330px;
+    margin-top: 70px;    
+}
+
+p {
+    font-style: initial;
+    font-weight: bolder;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoloLearn</title>
+    <link rel="stylesheet" href="/Website/CSS/SoloLearn.css">
+    <script src="/Website/Javascript/SoloLearn.js"></script>
+</head>
+
+<body>
+    <!-- ini adalah paragraf -->
+    <p>Ini adalah paragraf yang ditandai p </p>
+    <p>ini adalah paragraf <br> yang ada linebreaknya</p>
+    <!-- ini adalah formatting element -->
+    <p>ini adalah teks biasa</p>
+    <p><b>ini adalah teks bold</b></p>
+    <p><big>ini adalah teks big</big></p>
+    <p><i>ini adalah teks italik</i></p>
+    <p><small>ini adalah teks small</small></p>
+    <p><strong>ini adalah teks strong</strong></p>
+    <p><sub>ini adalah teks subscripted</sub></p>
+    <p><sup>ini adalah teks superscripted</sup></p>
+    <p><ins>ini adalah teks inserted</ins></p>
+    <p><del>ini adalah teks deleted</del></p>
+    <!-- ini adalah heading -->
+    <h1>ini adalah h1</h1>
+    <h2>ini adalah h2</h2>
+    <h3>ini adalah h3</h3>
+    <h4>ini adalah h4</h4>
+    <h5>ini adalah h5</h5>
+    <h6>ini adalah h6</h6>
+    <hr>
+    <p>diatas adalah garis horizontal
+        <!-- oh, ini adalah komen, lanjut aja yuk -->
+
+        <!-- HTML terbuat dari elemen HTML, yaitu tag pembuka dan penutup -->
+        <p align="center"> ini adalah teks yang diberi atribut center, teks ini bisa dimodifikasi langsung dari tag-nya,
+            lihat dibawah ini
+        </p>
+        <hr width="500px">
+        <img src="/Resources/image/FB_IMG_1605262203731.jpg" alt="ini adalah catatan jika gambarnya tak muncul"
+            srcset="">
+        <p>diatas adalah gambar, atributnya bisa dimodifikasi, tapi saat ini tak kulakukan</p>
+        <a href="Beranda.html" target="_blank">ini adalah teks link, yang bertanda a (link ini akan mengarahkanmu ke
+            beranda, coba pencet :>)</a>
+        <p>link diatas telah dimodifikasi</p>
+        <!-- ini adalah list -->
+        <ol>
+            <li>ini</li>
+            <li>adalah</li>
+            <li>ordered list (yang ditandai dengan angka)</li>
+            <li>dan daftar saat ini menggunakan li (list)</li>
+        </ol>
+        <ul>
+            <li>ini juga sama seperti diatas</li>
+            <li>hanya saja perbedaannya dengan yang ada diatas</li>
+            <li>adalah list ini tak menggunakan angka</li>
+            <li>dan bernama unordered list (ul)</li>
+        </ul>
+        <!-- ini adalah tabel -->
+        <table border="3">
+            <tr>
+                <td>ini</td>
+                <td>adalah</td>
+                <td>kolom</td>
+                <td>tabel</td>
+                <td>yang sudah dimodifikasi dengan tambahan stroke</td>
+                <td>dan menggunakan elemen td(Table Data)</td>
+            </tr>
+            <tr>
+                <td>ini adalah baris selanjutnya yang ditandai dengan tr</td>
+            </tr>
+            <td colspan="3">ini adalah kolom yang diberi atribut colspan yang berfungsi mengambil alih kolom lain
+                menjadi satu seperti ini, aku menulis value colspan = 3 sehingga 3 column ini diambil alih</td>
+            <tr>
+                <td bgcolor="blue">ini adalah kolom yang telah dimodifikasi dengan bgcolor warna biru</td>
+            </tr>
+        </table>
+        <!-- membahas tentang tipe elemen -->
+        <div style="background-color: tomato;color: white;">
+            <p>ini adalah paragraf yang masuk dalam div</p>
+            <p>yaitu elemen yang bisa mengangkut dan memodifikasi semua yang ada didalam div ini (/div adalah section)
+            </p>
+            <p>elemen yang saat ini ada di HTML adalah block/inline element</p>
+            <p>inline elemen biasanya ditampilkan tanpa spasi/pemisahan</p>
+            <p>div saat ini telah dimodifikasi menggunakan atribut style</p>
+        </div>
+        <h2><span style="color: crimson;">Span</span> adalah atribut yang memungkinkan untuk memodifikasi teks di
+            satu baris yang sama dimana atribut lain tak dapat melakukannya, area yang ditandai span ini telah
+            dimodifikasi</h2>
+        <!-- ini adalah form, form menjadi input-nya di web, namun karena inputnya banyak sekali, maka saya tidak memasukkan semuanya -->
+        <form action="">
+            <label for="warna">ini adalah pemilih warna (color picker) --> </label>
+            <input type="color" name="input ini memilih color" id="warna">
+            <input type="button" value="input ini adalah button">
+            <label for="chek">ini adalah checkbox --> </label>
+            <input type="checkbox" name="ini adalah checkbox" id="chek">
+            <input type="submit" value="ini adalah submit">
+            <label for="email">ini adalah form email yang telah diberi attribute autofocus --> </label>
+            <input type="text" name="email" id="email" placeholder="contoh@domain.com" autofocus>
+        </form>
+        <!-- warna web terdiri dari sistem bilangan heksadesimal, dan ada yang namanya frameset, namun sayangnya frameset tak didukung di HTML5 -->
+        <!-- khusus CSS mulai dibawah ini -->
+        <ul class="css">
+            <li>ini adalah</li>
+            <li>list</li>
+            <li>yang diberi</li>
+            <li>image</li>
+        </ul>
+        <a href="/Website/HTML/Beranda.html">kembali ke beranda (khusus CSS)</a>
+        <audio src="/Resources/music/Giorno_s Theme (Jay D Remix)(MP3_160K).mp3" controls loop>aaa</audio>
+        <video src="/Resources/video/Cara Baca Spesifikasi RAM PC (Desktop_Laptop) Bersama Alva Jonathan.mp4" controls
+            loop>iii</video>
+        Nilai = <progress min="0" max="100" value="90"></progress>
+        <p id="fixed"> ini adalah paragraf fixed</p>
+        <!-- dibawah ini adalah canvas -->
+        <canvas id="canvas1" width="1920" height="1080"></canvas>
+        <script>
+            var can = document.getElementById("canvas1");
+            var ctx = can.getContext("2d");
+        </script>
+</body>
+
+</html>

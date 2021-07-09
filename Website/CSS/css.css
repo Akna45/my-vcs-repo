@@ -1,0 +1,51 @@
+/*
+    menggunakan z-index harus juga memakai "position : relative;"
+*/
+
+body{
+    background-image: url(/Resources/image/Black-Clover-1024x576-3.jpg);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ungu {
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: inset -25px -35px 20px -10px #3d0029,
+    inset -45px -40px 35px -20px rgb(26, 0, 10);
+}
+
+#p{
+    color: red;
+}
+
+#p p:last-child{
+    color: rgb(112, 2, 255);
+}
+
+#ijo {
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    margin-top: -50px;
+    margin-left: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+#webkit {
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: 100px;
+    z-index: 3;
+    position: relative;
+    border-image: url(/Resources/image/IMG_1778.png);
+    -webkit-border-image: url(/Resources/image/IMG_1778.png);
+}

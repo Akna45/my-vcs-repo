@@ -1,0 +1,40 @@
+body{
+    background-image: url(/Resources/image/IMG_1778.png);    
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* fixed membuat gambarnya ikut maju sedangkan scroll malah tidak, kenapa ya? */
+}
+
+.css{
+    list-style-image: url(/Resources/image/IMG_1778.png);
+    list-style-position: inside;
+}
+
+a:link{
+    text-decoration: none;  
+    color: rgb(55, 24, 194);
+}
+
+a:hover{
+    color: rgb(190, 30, 30);
+}
+
+a:active{
+    color: rgb(28, 209, 104);
+}
+
+a:visited{
+    color: hotpink;
+}
+
+#fixed{
+    position: fixed;
+    color: red;
+    top: 500px;
+    right: 500px;
+    bottom: 500px;
+    left: 500px;
+}
+
+#awal{
+    float: right;
+}
