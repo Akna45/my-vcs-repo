@@ -43,16 +43,16 @@
             "type": "shell",
             "command":"g++",
             "args": [
-                "-std=gnu++14",
-                ".\\src\\*.cpp",
+                "-std=c++17",
+                ".\\src\\C-C++\\*.cpp",
                 "-o",
-                ".\\bin\\Main.exe"
+                ".\\src\\C-C++\\bin\\Main.exe",
             ]
         },
         {
             "label": "run",
             "type": "shell",
-            "command":".\\bin\\Main",
+            "command":".\\src\\C-C++\\bin\\Main",
             "dependsOn":["C++ Compiler"],
             "group": {
                 "kind": "build",

@@ -28,6 +28,10 @@ body{
     color: rgb(112, 2, 255);
 }
 
+p{
+    background: -webkit-linear-gradient(red, Green);
+}
+
 #ijo {
     background-color: green;
     width: 200px;

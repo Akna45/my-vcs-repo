@@ -12,6 +12,16 @@ h1{
 p {
     text-align: center;
     color: white;
+    border: 10px solid royalblue;
+}
+
+p::first-line{
+    background-color: red;
+    color: black;
+}
+
+p::after{
+    content: url(/Resources/image/IMG_1778.png);
 }
 
 a {
