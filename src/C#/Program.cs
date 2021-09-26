@@ -2,6 +2,8 @@
 using System.Collections;
 using System.IO;
 using System.Runtime;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace C_Sharp
 {
@@ -11,10 +13,12 @@ namespace C_Sharp
         {
             Console.WriteLine("Halo, ini adalah koding tertanggal : " + DateTime.Now);
             // input
-            ReadFile("a.txt");
+            StringBuilder sb = new StringBuilder(1);
+            //output
+            sb.Append("Hello, C#!");
+            Console.WriteLine("{0}, length = {1}", sb, sb.Length);
             Console.ReadKey();
 
-            //output
 
         }
         static void ReadFile(string fileName)
@@ -29,6 +33,15 @@ namespace C_Sharp
             {
                 reader.Close();
             }
+        }
+        static string ReverseText(string text)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = text.Length - 1; i >= 0; i--)
+            {
+                sb.Append(text[i]);
+            }
+            return sb.ToString();
         }
     }
     // contoh object
@@ -87,6 +100,7 @@ namespace C_Sharp
         }
     }
     public class Sequence
+
     {
         // Static field, holding the current sequence value
         private static int currentValue = 0;
@@ -101,4 +115,52 @@ namespace C_Sharp
             return currentValue;
         }
     }
+
+    class Tes
+    {
+        // data field
+        public string a;
+        public int i;
+        public bool b;
+        // constructor
+        public Tes()
+        {
+            a = "tes";
+            i = 0;
+        }
+        // method
+        public bool nyalakanMesin()
+        {
+            Console.WriteLine("menyalakan mesin...");
+            b = true;
+            return b;
+        }
+        public bool matikanMesin()
+        {
+            Console.WriteLine("mematikan mesin...");
+            b = false;
+            return b;
+        }
+    }
+    class Mobil
+    {
+        public string pabrikan;
+        public string model;
+        public int thnPembuatan;
+        // Default Constructor
+        /*public Mobil()
+        {
+            pabrikan = "Toyota";
+            model = "Hatchback";
+        }*/
+        // Parameterized Constructor
+        public Mobil(string a, string b, int c)
+        {
+            pabrikan = a;
+            model = b;
+            thnPembuatan = c;
+        }
+
+    }
 }
+
