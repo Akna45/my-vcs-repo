@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace C_Sharp
 {
@@ -13,26 +14,11 @@ namespace C_Sharp
         {
             Console.WriteLine("Halo, ini adalah koding tertanggal : " + DateTime.Now);
             // input
-            StringBuilder sb = new StringBuilder(1);
+            bool hasil = (2 < 3 && 1 == 2);
             //output
-            sb.Append("Hello, C#!");
-            Console.WriteLine("{0}, length = {1}", sb, sb.Length);
+            Console.WriteLine(hasil);
             Console.ReadKey();
 
-
-        }
-        static void ReadFile(string fileName)
-        {
-            TextReader reader = null;
-            try
-            {
-                string line = reader.ReadLine();
-                Console.WriteLine(line);
-            }
-            finally
-            {
-                reader.Close();
-            }
         }
         static string ReverseText(string text)
         {
@@ -99,23 +85,33 @@ namespace C_Sharp
             Console.WriteLine("Cat {0} said: Miauuuuuu!", name);
         }
     }
-    public class Sequence
-
-    {
-        // Static field, holding the current sequence value
-        private static int currentValue = 0;
-        // Intentionally deny instantiation of this class
-        private Sequence()
+    // Class declaration
+    public class Dog
+    { // Opening bracket of the class body
+      // Field declaration
+        private string name;
+        // Constructor declaration (peremeterless empty constructor)
+        public Dog()
         {
         }
-        // Static method for taking the next sequence value
-        public static int NextValue()
+        // Another constructor declaration
+        public Dog(string name)
         {
-            currentValue++;
-            return currentValue;
+            this.name = name;
         }
-    }
-
+        // Property declaration
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        // Method declaration (non-static)
+        public void Bark()
+        {
+            Console.WriteLine("{0} said: Wow-wow!",
+            name ?? "[unnamed dog]");
+        }
+    } // Closing bracket of the class body
     class Tes
     {
         // data field
@@ -163,4 +159,3 @@ namespace C_Sharp
 
     }
 }
-
