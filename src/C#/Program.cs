@@ -5,32 +5,35 @@ using System.Runtime;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using ContohObjek;
 
 namespace C_Sharp
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Halo, ini adalah koding tertanggal : " + DateTime.Now);
-            // input
-            bool hasil = (2 < 3 && 1 == 2);
-            //output
-            Console.WriteLine(hasil);
-            Console.ReadKey();
+            // playground contoh
+            Dog anjing = new Dog(); // deklarasi objek menggunakan keyword "new"
+            const long a = 10;
 
-        }
-        static string ReverseText(string text)
-        {
-            StringBuilder sb = new StringBuilder();
-            for (int i = text.Length - 1; i >= 0; i--)
-            {
-                sb.Append(text[i]);
-            }
-            return sb.ToString();
+            // input
+
+            //output
+            anjing.MakeOlder();
+
+
+            Console.WriteLine("umur anjing-mu sekarang adalah : " + anjing.GetAge());
+            Console.WriteLine(a);
+            Console.ReadKey();
         }
     }
-    // contoh object
+}
+
+namespace ContohObjek
+{
+    // gunakan namespace ini untuk menarugh contoh dari referensi atau
     /// <summary>
     /// contoh objek kucing
     /// </summary>
@@ -90,6 +93,9 @@ namespace C_Sharp
     { // Opening bracket of the class body
       // Field declaration
         private string name;
+        int age;
+        int length;
+        bool isMale;
         // Constructor declaration (peremeterless empty constructor)
         public Dog()
         {
@@ -105,11 +111,19 @@ namespace C_Sharp
             get { return name; }
             set { name = value; }
         }
+        public int GetAge()
+        {
+            return age;
+        }
+        public void MakeOlder()
+        {
+            this.age++;
+        }
         // Method declaration (non-static)
         public void Bark()
         {
             Console.WriteLine("{0} said: Wow-wow!",
-            name ?? "[unnamed dog]");
+            name ?? "[unnamed Dog]");
         }
     } // Closing bracket of the class body
     class Tes
@@ -155,7 +169,54 @@ namespace C_Sharp
             pabrikan = a;
             model = b;
             thnPembuatan = c;
+
         }
 
     }
+    static class Text
+    {
+        static void ReadFile(string fileName)
+        {
+            TextReader reader = new StreamReader(fileName);
+            string line = reader.ReadLine();
+            Console.WriteLine(line);
+            reader.Close();
+        }
+        static string ReverseText(string text)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = text.Length - 1; i >= 0; i--)
+            {
+                sb.Append(text[i]);
+            }
+            return sb.ToString();
+        }
+    }
+}
+
+namespace Pembelajaran
+{
+    class Aritmatika
+    {
+        static int Tambah(int a, int b)
+        {
+            int c = a + b;
+            return c;
+        }
+    }
+    public class Contoh // deklarasi class
+    { // bodi class (mulai/bagian pertama dieksekusi)
+        private string a; // field class
+        private string Name { get; set; } // property class
+        readonly int myValue = 3;
+        void PrintMyValue() // deklarasi method class (non-static)
+        { // method body
+            int myValue = 5;
+            Console.WriteLine("My value is: " + myValue);
+        }
+        public int Coba(int a, int b/*parameter*/)
+        {
+            return a + b;
+        }
+    } // bodi class (akhir/bagian terakhir dieksekusi)
 }
