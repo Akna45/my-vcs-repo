@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using ContohObjek;
+using Pembelajaran;
 
 namespace C_Sharp
 {
@@ -15,17 +16,26 @@ namespace C_Sharp
         {
             Console.WriteLine("Halo, ini adalah koding tertanggal : " + DateTime.Now);
             // playground contoh
-            Dog anjing = new Dog(); // deklarasi objek menggunakan keyword "new"
-            const long a = 10;
-
             // input
-
             //output
-            anjing.MakeOlder();
+            int[] array = { 1, 2, 3, 4, 5 };
+            // Get array size
+            int length = array.Length;
+            // Declare and create the reversed array
+            int[] reversed = new int[length];
+            // Initialize the reversed array
+            for (int index = 0; index < length; index++)
+            {
+                reversed[length - index - 1] = array[index];
+            }
+            // Print the reversed array
+            for (int index = 0; index < length; index++)
+            {
+                Console.Write(reversed[index] + " ");
+            }
+            Console.WriteLine("\n" + array.Length);
+            // ..
 
-
-            Console.WriteLine("umur anjing-mu sekarang adalah : " + anjing.GetAge());
-            Console.WriteLine(a);
             Console.ReadKey();
         }
     }
@@ -120,12 +130,23 @@ namespace ContohObjek
             this.age++;
         }
         // Method declaration (non-static)
-        public void Bark()
+        private void Bark()
         {
             Console.WriteLine("{0} said: Wow-wow!",
             name ?? "[unnamed Dog]");
         }
     } // Closing bracket of the class body
+    public class Kid
+    {
+        public void CallTheDog(Dog dog)
+        {
+            Console.WriteLine("Come, " + dog.Name);
+        }
+        public void WagTheDog(Dog dog)
+        {
+
+        }
+    }
     class Tes
     {
         // data field
@@ -206,8 +227,14 @@ namespace Pembelajaran
     }
     public class Contoh // deklarasi class
     { // bodi class (mulai/bagian pertama dieksekusi)
-        private string a; // field class
-        private string Name { get; set; } // property class
+        private string a = null; // field class
+        private string Name { get; set; } // property class (automatic property)
+        private string name; // field
+        public string Nama   // classic property initialization
+        {
+            get { return name; }
+            set { name = value; }
+        }
         readonly int myValue = 3;
         void PrintMyValue() // deklarasi method class (non-static)
         { // method body
@@ -218,5 +245,26 @@ namespace Pembelajaran
         {
             return a + b;
         }
+        public Contoh() // constructor (bagian yang otomatis dieksekusi saat dipanggil berdasarkan parameter tertentu yang sudah diisi)
+        {
+            this.a = "a";
+        }
     } // bodi class (akhir/bagian terakhir dieksekusi)
+    public class Percobaan
+    {
+        private string name = "anjing";
+        private void Bark()
+        {
+            Console.WriteLine("{0} said: Wow-wow!",
+            name ?? "[unnamed Dog]");
+        }
+        static void main()
+        {
+
+        }
+        public Percobaan()
+        {
+            Console.WriteLine("this.name mempunyai nilai = " + this.name);
+        }
+    }
 }
